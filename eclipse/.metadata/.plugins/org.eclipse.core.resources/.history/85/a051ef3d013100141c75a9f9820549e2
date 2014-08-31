@@ -1,0 +1,7 @@
+package net.fluffy885craft.mod;
+
+@Mod(modid=)
+
+public class fluffy885craft {
+
+}

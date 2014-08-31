@@ -1,0 +1,10 @@
+package net.fluffy885craft.mod;
+
+import cpw.mods.fml.common.Mod;
+
+@Mod(modid = Fluffy885Craft.modid, version = Fluffy885Craft.version)
+
+public class Fluffy885Craft {
+	public static final String modid = "Fluffy885Craft";
+	public static final String version = "Alpha v0.1";
+}

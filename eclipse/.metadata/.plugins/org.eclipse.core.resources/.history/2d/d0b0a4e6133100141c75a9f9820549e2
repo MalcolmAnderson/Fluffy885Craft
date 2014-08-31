@@ -1,0 +1,43 @@
+package net.fluffy885craft.mod;
+
+import net.fluffy885craft.mod.blocks.CopperOre;
+import net.fluffy885craft.mod.items.FCItems;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@Mod(modid = Fluffy885Craft.modid, version = Fluffy885Craft.version)
+
+public class Fluffy885Craft {
+	public static final String modid = "Fluffy885Craft";
+	public static final String version = "Alpha v0.1";
+	
+	public static Item itemCopperIngot;
+	public static Block oreCopperOre;
+	
+	@EventHandler
+	public void PreInit(FMLPreInitializationEvent preEvent){
+		itemCopperIngot = new FCItems().setUnlocalizedName("CopperIngot");
+		GameRegistry.registerItem(itemCopperIngot, "CopperIngot");
+		
+		oreCopperOre = new CopperOre(Material.rock).setBlockName("CopperOre");
+		GameRegistry.registerBlock(oreCopperOre, "CopperOre");
+	}
+	
+	@EventHandler
+	public void Init(FMLInitializationEvent event){
+		
+	}
+	
+	@EventHandler
+	public void PostInit(FMLPostInitializationEvent postEvent){
+		
+	}
+	
+}
